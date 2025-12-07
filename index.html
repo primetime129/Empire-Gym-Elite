@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#1a1410">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1">
+    <meta name="theme-color" content="#0d0a08">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Empire Gym Elite">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-
-    <meta name="theme-color" content="#1a1410">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Empire Gym Elite">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
     <link rel="apple-touch-icon" href="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/464ab4eb-46d9-428f-bf7b-f3cca74840e3">
     <link rel="icon" type="image/png" href="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/464ab4eb-46d9-428f-bf7b-f3cca74840e3">
     <title>Empire Gym Elite</title>
@@ -41,6 +32,8 @@
             width: 100%;
             height: 100%;
             position: fixed;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -55,33 +48,9 @@
             height: 100vh;
         }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #0d0a08;
-            background-image: linear-gradient(135deg, #0d0a08 0%, #1a1410 100%);
-        }
-
-        .bg-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-
         .glow-orb {
             position: absolute;
             border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
             opacity: 0.1;
             z-index: 0;
         }
@@ -248,85 +217,6 @@
             animation-delay: 6s;
         }
 
-        .barbell {
-            position: absolute;
-            font-size: 18px;
-            opacity: 0.07;
-            animation: rotate-slow 15s linear infinite;
-            z-index: 0;
-        }
-
-        .barbell-1 {
-            top: 35%;
-            right: 12%;
-            animation-delay: 3s;
-        }
-
-        .barbell-2 {
-            bottom: 35%;
-            left: 12%;
-            animation-delay: 10s;
-        }
-
-        .kettlebell {
-            position: absolute;
-            font-size: 22px;
-            opacity: 0.06;
-            animation: float-slow 12s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        .kettlebell-1 {
-            top: 45%;
-            left: 3%;
-            animation-delay: 1s;
-        }
-
-        .kettlebell-2 {
-            bottom: 10%;
-            right: 3%;
-            animation-delay: 5s;
-        }
-
-        .heart-rate {
-            position: absolute;
-            font-size: 16px;
-            opacity: 0.06;
-            animation: pulse-slow 2s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        .heart-rate-1 {
-            top: 20%;
-            left: 15%;
-        }
-
-        .heart-rate-2 {
-            bottom: 25%;
-            right: 20%;
-            animation-delay: 0.5s;
-        }
-
-        .medal {
-            position: absolute;
-            font-size: 20px;
-            opacity: 0.07;
-            animation: float-slow 11s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        .medal-1 {
-            top: 5%;
-            right: 20%;
-            animation-delay: 2s;
-        }
-
-        .medal-2 {
-            bottom: 5%;
-            left: 18%;
-            animation-delay: 6s;
-        }
-
         @keyframes float {
             0%, 100% { transform: translate(0, 0); }
             50% { transform: translate(30px, 30px); }
@@ -353,7 +243,6 @@
         }
 
         .container {
-            max-width: 480px;
             width: 100%;
             height: 100vh;
             padding: 12px;
@@ -362,12 +251,14 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
             z-index: 10;
         }
 
         .card {
-            padding: 20px 15px;
+            padding: 12px 10px;
             background: linear-gradient(135deg, rgba(13, 10, 8, 0.96) 0%, rgba(26, 20, 16, 0.96) 100%);
             border: 2px solid var(--accent-red);
             border-radius: 15px;
@@ -378,8 +269,9 @@
                 0 0 30px rgba(212, 175, 55, 0.15);
             backdrop-filter: blur(20px);
             animation: boxing-pulse 4s ease-in-out infinite;
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 20px);
+            height: calc(100vh - 24px);
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -428,15 +320,16 @@
 
         .header {
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 2vh;
             border-bottom: 2px solid var(--accent-red);
-            padding-bottom: 10px;
+            padding-bottom: 1.5vh;
             position: relative;
             z-index: 2;
+            flex-shrink: 0;
         }
 
         .gym-name {
-            font-size: 20px;
+            font-size: clamp(14px, 4vw, 18px);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -444,12 +337,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 4px;
+            margin-bottom: 1vh;
             font-family: 'Georgia', serif;
         }
 
         .subtitle {
-            font-size: 9px;
+            font-size: clamp(8px, 2.5vw, 9px);
             color: var(--text-secondary);
             letter-spacing: 0.8px;
             font-weight: 500;
@@ -458,8 +351,8 @@
 
         .member-info {
             text-align: center;
-            margin-bottom: 12px;
-            padding: 12px;
+            margin-bottom: 1.5vh;
+            padding: 1.5vh;
             background: rgba(196, 30, 58, 0.08);
             border: 1.5px solid var(--accent-red);
             border-radius: 10px;
@@ -467,29 +360,30 @@
             position: relative;
             z-index: 2;
             box-shadow: inset 0 0 15px rgba(196, 30, 58, 0.1);
+            flex-shrink: 0;
         }
 
         .member-photo {
-            width: 80px;
-            height: 80px;
+            width: clamp(60px, 15vw, 80px);
+            height: clamp(60px, 15vw, 80px);
             border-radius: 50%;
-            margin: 0 auto 8px;
+            margin: 0 auto 1vh;
             border: 2.5px solid var(--accent-red);
             object-fit: cover;
             box-shadow: 0 0 30px rgba(196, 30, 58, 0.5), 0 0 20px rgba(212, 175, 55, 0.2);
         }
 
         .member-name {
-            font-size: 14px;
+            font-size: clamp(11px, 3vw, 13px);
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 4px;
+            margin-bottom: 0.5vh;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .member-id {
-            font-size: 11px;
+            font-size: clamp(9px, 2vw, 10px);
             color: var(--accent-red);
             letter-spacing: 2px;
             font-weight: 700;
@@ -498,8 +392,8 @@
 
         .qr-section {
             text-align: center;
-            margin-bottom: 12px;
-            padding: 12px;
+            margin-bottom: 1.5vh;
+            padding: 1.5vh;
             background: rgba(196, 30, 58, 0.06);
             border: 1.5px solid var(--accent-red);
             border-radius: 10px;
@@ -512,12 +406,13 @@
             align-items: center;
             position: relative;
             z-index: 2;
+            min-height: 0;
         }
 
         .qr-label {
-            font-size: 9px;
+            font-size: clamp(7px, 2vw, 8px);
             color: var(--accent-red);
-            margin-bottom: 8px;
+            margin-bottom: 1vh;
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 1px;
@@ -525,7 +420,7 @@
 
         .qr-code {
             background: #ffffff;
-            padding: 8px;
+            padding: clamp(4px, 1vw, 6px);
             border-radius: 8px;
             display: inline-block;
             box-shadow: 0 0 50px rgba(196, 30, 58, 0.5), 0 0 25px rgba(212, 175, 55, 0.2);
@@ -544,23 +439,21 @@
 
         .qr-code img {
             display: block;
-            width: 140px;
-            height: 140px;
-            max-width: 100%;
-            height: auto;
+            width: clamp(100px, 25vw, 140px);
+            height: clamp(100px, 25vw, 140px);
         }
 
         .status-badge {
             display: inline-block;
-            padding: 6px 12px;
+            padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
             background: linear-gradient(45deg, var(--accent-red), var(--accent-gold));
             color: var(--primary-dark);
             border-radius: 15px;
-            font-size: 8px;
+            font-size: clamp(6px, 1.5vw, 8px);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-top: 8px;
+            margin-top: 1vh;
             box-shadow: 0 0 30px rgba(196, 30, 58, 0.6), 0 0 15px rgba(212, 175, 55, 0.3);
             position: relative;
             z-index: 2;
@@ -568,15 +461,16 @@
 
         .footer {
             text-align: center;
-            font-size: 8px;
+            font-size: clamp(6px, 1.5vw, 8px);
             color: var(--text-secondary);
-            margin-top: 8px;
-            padding-top: 8px;
+            margin-top: 1vh;
+            padding-top: 1vh;
             border-top: 1.5px solid var(--accent-red);
             letter-spacing: 0.8px;
             width: 100%;
             position: relative;
             z-index: 2;
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -599,6 +493,7 @@
             <div class="heart-rate heart-rate-2">❤️</div>
             <div class="medal medal-1">🏆</div>
             <div class="medal medal-2">🏆</div>
+            
             <div class="header">
                 <div class="gym-name">Empire Gym Elite</div>
                 <div class="subtitle">عبدالرحمن ابراهيم عبدالله</div>

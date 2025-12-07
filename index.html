@@ -46,6 +46,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
 
         .container {
@@ -53,6 +57,7 @@
             height: 100vh;
             height: 100dvh;
             padding: 10px;
+            padding-top: max(10px, env(safe-area-inset-top));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,8 +68,8 @@
         .card {
             width: 100%;
             max-width: 450px;
-            height: 96vh;
-            height: 96dvh;
+            height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);
+            height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);
             max-height: 850px;
             padding: clamp(12px, 2.5vh, 18px);
             background: linear-gradient(135deg, rgba(13, 10, 8, 0.97) 0%, rgba(26, 20, 16, 0.97) 100%);

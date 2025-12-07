@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1">
-    <meta name="theme-color" content="#1a1410">
+    <meta name="theme-color" content="#0d0a08">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Empire Gym Elite">
@@ -35,11 +35,13 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background: #0d0a08;
         }
 
         body {
             font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
-            background: linear-gradient(135deg, #1a1410 0%, #0d0a08 100%);
+            background: #0d0a08;
+            background-image: linear-gradient(135deg, #0d0a08 0%, #1a1410 100%);
             color: var(--text-primary);
             display: flex;
             align-items: center;
@@ -55,6 +57,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            background: transparent;
         }
 
         .card {
@@ -63,7 +66,7 @@
             height: 96vh;
             height: 96dvh;
             max-height: 850px;
-            padding: clamp(10px, 2vh, 16px);
+            padding: clamp(12px, 2.5vh, 18px);
             background: linear-gradient(135deg, rgba(13, 10, 8, 0.97) 0%, rgba(26, 20, 16, 0.97) 100%);
             border: 2px solid var(--accent-red);
             border-radius: 15px;
@@ -97,72 +100,72 @@
         .header {
             text-align: center;
             border-bottom: 2px solid var(--accent-red);
-            padding-bottom: clamp(8px, 1.5vh, 12px);
-            margin-bottom: clamp(8px, 1.5vh, 12px);
+            padding-bottom: clamp(10px, 2vh, 14px);
+            margin-bottom: clamp(12px, 2.5vh, 16px);
         }
 
         .gym-name {
-            font-size: clamp(16px, 3.5vw, 20px);
+            font-size: clamp(18px, 4vw, 22px);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             background: linear-gradient(45deg, var(--accent-red), var(--accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: clamp(4px, 0.8vh, 6px);
+            margin-bottom: clamp(6px, 1.2vh, 8px);
             font-family: 'Georgia', serif;
         }
 
         .subtitle {
-            font-size: clamp(8px, 2vw, 10px);
+            font-size: clamp(9px, 2.2vw, 11px);
             color: var(--text-secondary);
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
         }
 
         .member-info {
             text-align: center;
-            padding: clamp(8px, 1.5vh, 12px);
+            padding: clamp(14px, 3vh, 20px);
             background: rgba(196, 30, 58, 0.08);
             border: 1.5px solid var(--accent-red);
-            border-radius: 10px;
-            margin-bottom: clamp(8px, 1.5vh, 12px);
+            border-radius: 12px;
+            margin-bottom: clamp(12px, 2.5vh, 16px);
             box-shadow: inset 0 0 15px rgba(196, 30, 58, 0.1);
         }
 
         .member-photo {
-            width: clamp(60px, 12vw, 80px);
-            height: clamp(60px, 12vw, 80px);
+            width: clamp(90px, 20vw, 120px);
+            height: clamp(90px, 20vw, 120px);
             border-radius: 50%;
-            margin: 0 auto clamp(6px, 1vh, 8px);
-            border: 2.5px solid var(--accent-red);
+            margin: 0 auto clamp(10px, 2vh, 14px);
+            border: 3px solid var(--accent-red);
             object-fit: cover;
-            box-shadow: 0 0 30px rgba(196, 30, 58, 0.5);
+            box-shadow: 0 0 40px rgba(196, 30, 58, 0.6), 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .member-name {
-            font-size: clamp(12px, 2.8vw, 14px);
-            font-weight: 600;
-            margin-bottom: clamp(3px, 0.5vh, 5px);
+            font-size: clamp(15px, 3.5vw, 18px);
+            font-weight: 700;
+            margin-bottom: clamp(6px, 1.2vh, 8px);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .member-id {
-            font-size: clamp(10px, 2.2vw, 12px);
+            font-size: clamp(12px, 2.8vw, 14px);
             color: var(--accent-red);
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             font-weight: 700;
             font-family: 'Courier New', monospace;
         }
 
         .qr-section {
             text-align: center;
-            padding: clamp(8px, 1.5vh, 12px);
+            padding: clamp(14px, 3vh, 20px) clamp(12px, 2.5vh, 16px);
             background: rgba(196, 30, 58, 0.06);
             border: 1.5px solid var(--accent-red);
-            border-radius: 10px;
-            margin-bottom: clamp(8px, 1.5vh, 12px);
+            border-radius: 12px;
+            margin-bottom: clamp(10px, 2vh, 14px);
             box-shadow: inset 0 0 15px rgba(196, 30, 58, 0.08);
             flex: 1;
             display: flex;
@@ -173,18 +176,18 @@
         }
 
         .qr-label {
-            font-size: clamp(7px, 1.8vw, 9px);
+            font-size: clamp(8px, 2vw, 10px);
             color: var(--accent-red);
-            margin-bottom: clamp(6px, 1vh, 8px);
+            margin-bottom: clamp(10px, 2vh, 14px);
             text-transform: uppercase;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
         }
 
         .qr-code {
             background: #ffffff;
-            padding: clamp(5px, 1vh, 8px);
-            border-radius: 8px;
+            padding: clamp(8px, 1.5vh, 10px);
+            border-radius: 10px;
             box-shadow: 0 0 50px rgba(196, 30, 58, 0.5);
             border: 2px solid var(--accent-red);
             animation: qr-glow 4s ease-in-out infinite;
@@ -197,29 +200,29 @@
 
         .qr-code img {
             display: block;
-            width: clamp(100px, 22vw, 140px);
-            height: clamp(100px, 22vw, 140px);
+            width: clamp(130px, 28vw, 160px);
+            height: clamp(130px, 28vw, 160px);
         }
 
         .status-badge {
             display: inline-block;
-            padding: clamp(4px, 0.8vh, 6px) clamp(8px, 1.5vw, 12px);
+            padding: clamp(6px, 1.2vh, 8px) clamp(14px, 3vw, 18px);
             background: linear-gradient(45deg, var(--accent-red), var(--accent-gold));
             color: var(--primary-dark);
-            border-radius: 15px;
-            font-size: clamp(7px, 1.6vw, 8px);
+            border-radius: 18px;
+            font-size: clamp(8px, 2vw, 9px);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: clamp(6px, 1vh, 8px);
+            letter-spacing: 1.2px;
+            margin-top: clamp(10px, 2vh, 14px);
             box-shadow: 0 0 30px rgba(196, 30, 58, 0.6);
         }
 
         .footer {
             text-align: center;
-            font-size: clamp(7px, 1.6vw, 8px);
+            font-size: clamp(7px, 1.8vw, 9px);
             color: var(--text-secondary);
-            padding-top: clamp(6px, 1vh, 8px);
+            padding-top: clamp(8px, 1.5vh, 10px);
             border-top: 1.5px solid var(--accent-red);
             letter-spacing: 0.8px;
         }
